@@ -3,11 +3,14 @@ import Image from 'next/image';
 import { fetchProductById, fetchProducts } from '../../../utils/api';
 import { notFound } from 'next/navigation';
 import AddToCartButton from '@/Component/CartButton';
-import { Product } from '@/app/Types/index';
-import { Card, CardContent, CardFooter, CardHeader, CardTitle } from '@/components/ui/card';
+import { Card, CardContent,  CardHeader, CardTitle } from '@/components/ui/card';
 import { ShoppingCart } from 'lucide-react';
+export const dynamic = 'force-dynamic';
+export const fetchCache = 'force-no-store';
 
-// Explicitly type generateStaticParams to match the dynamic route
+
+
+// // Explicitly type generateStaticParams to match the dynamic route
 export async function generateStaticParams(): Promise<{ id: string }[]> {
   const products = await fetchProducts();
   return products.map(product => ({ id: product.id.toString() }));

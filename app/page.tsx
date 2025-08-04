@@ -12,10 +12,13 @@ export const metadata: Metadata = {
   description: 'Browse our wide range of products.',
 };
 
-export async function generateStaticParams() {
-  const products = await fetchProducts();
-  return products.map(product => ({ id: product.id.toString() }));
-}
+// export async function generateStaticParams() {
+//   const products = await fetchProducts();
+//   return products.map(product => ({ id: product.id.toString() }));
+// }
+
+
+
 const categories = [
   { name: "Electronics", icon: "⚡", count: "2.5k+" },
   { name: "Fashion", icon: "👕", count: "1.8k+" },

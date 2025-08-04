@@ -24,7 +24,6 @@ export default function CartSummary() {
   }
 
 
-
    const totalAmount = cartItems.reduce((sum, item) => sum + item.price * item.quantity, 0);
   const totalItems = cartItems.reduce((sum, item) => sum + item.quantity, 0);
 
