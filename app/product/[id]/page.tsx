@@ -9,7 +9,6 @@ export const dynamic = 'force-dynamic';
 export const fetchCache = 'force-no-store';
 
 
-
 // // Explicitly type generateStaticParams to match the dynamic route
 export async function generateStaticParams(): Promise<{ id: string }[]> {
   const products = await fetchProducts();

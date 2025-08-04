@@ -174,8 +174,8 @@ const Footer = () => {
                 </filter>
               </defs>
             </svg>
-            <h3 className="text-3xl font-extrabold text-blue-600 dark:text-teal-400">
-              SeraUI
+            <h3 className="text-3xl font-extrabold text-black dark:text-teal-400">
+              Acme Inc
             </h3>
           </div>
           <p className="text-gray-600 dark:text-gray-300 text-sm leading-relaxed">
@@ -314,11 +314,10 @@ const Footer = () => {
       </div>
       <div className="text-center text-gray-500 dark:text-gray-400 text-sm pt-10 mt-10 border-t border-gray-200 dark:border-gray-700">
         <p>
-          &copy; {new Date().getFullYear()} Your Brand. All rights reserved.
+          &copy; {new Date().getFullYear()} Acme Inc. All rights reserved.
         </p>
         <p className="mt-1">
-          Designed with <span className="text-red-500">&hearts;</span> by Your
-          Company
+          Designed with <span className="text-red-500">&hearts;</span> by Acme Inc
         </p>
       </div>
     </footer>

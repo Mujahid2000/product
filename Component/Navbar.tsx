@@ -148,18 +148,7 @@ const Header = () => {
                 Get Started
              </a>
 
-            {/* Theme Toggle Button */}
-            <button
-              onClick={toggleTheme}
-              className="p-2 rounded-md text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white hover:bg-gray-100 dark:hover:bg-gray-800 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-gray-500 dark:focus:ring-gray-400 transition-colors duration-300"
-              aria-label="Toggle theme"
-            >
-              {theme === 'dark' ? (
-                <SunIcon className="h-5 w-5" />
-              ) : (
-                <MoonIcon className="h-5 w-5" />
-              )}
-            </button>
+            
 
             {/* Mobile Menu Button */}
             <div className="md:hidden">
