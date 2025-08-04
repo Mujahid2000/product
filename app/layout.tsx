@@ -23,7 +23,7 @@ export default function RootLayout({
       <head>
     <meta charSet="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Home Decor</title>
+    <title>Acme Inc</title>
     <meta name="description" content='My Job' />
   </head>
       <body className={inter.className}>
