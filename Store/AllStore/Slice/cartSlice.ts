@@ -1,4 +1,4 @@
-import { CartItem } from '@/app/Types';
+import { CartItem } from '@/Types';
 import { createSlice, PayloadAction } from '@reduxjs/toolkit';
 
 interface CartState {

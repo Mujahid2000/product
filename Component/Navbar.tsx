@@ -100,7 +100,7 @@ const MoonIcon = ({ className }: { className?: string }) => (
 );
 
 const Header = () => {
-  // State to manage the visibility of the mobile menu
+
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const { theme, setTheme } = useTheme();
 
@@ -109,12 +109,10 @@ const Header = () => {
     { href: "/", label: "Home" },
     { href: "/orders", label: "Orders" },
     { href: "/checkout", label: "Checkout" },
-    { href: "#", label: "Contact" },
+   
   ];
 
-  const toggleTheme = () => {
-    setTheme(theme === 'dark' ? 'light' : 'dark');
-  };
+
 
   return (
     <header className="bg-white/80 dark:bg-black/80 backdrop-blur-sm sticky top-0 z-50 w-full border-b border-gray-200 dark:border-gray-700">

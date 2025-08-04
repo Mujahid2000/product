@@ -1,6 +1,6 @@
 'use client';
 
-import { CartItem } from '@/app/Types';
+import { CartItem } from '@/Types';
 import { Button } from '@/components/ui/button';
 import { addToCart } from '@/Store/AllStore/Slice/cartSlice';
 import { useAppDispatch } from '@/Store/hooks';

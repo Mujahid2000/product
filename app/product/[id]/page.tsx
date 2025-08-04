@@ -9,13 +9,13 @@ export const dynamic = 'force-dynamic';
 export const fetchCache = 'force-no-store';
 
 
-// // Explicitly type generateStaticParams to match the dynamic route
+//  generateStaticParams to match the dynamic route
 export async function generateStaticParams(): Promise<{ id: string }[]> {
   const products = await fetchProducts();
   return products.map(product => ({ id: product.id.toString() }));
 }
 
-// Explicitly type generateMetadata to handle dynamic params
+//  generateMetadata to handle dynamic params
 export async function generateMetadata({ params }: { params: Promise<{ id: string }> }): Promise<Metadata> {
   try {
     const resolvedParams = await params;
@@ -41,7 +41,7 @@ type ProductPageProps = {
 export default async function ProductPage({ params }: ProductPageProps) {
   let resolvedParams: { id: string };
   try {
-    // Resolve the params Promise as per your instruction
+    // Resolve the params Promise 
     resolvedParams = await params;
   } catch (error) {
     console.error('Error resolving params:', error);
@@ -82,7 +82,7 @@ export default async function ProductPage({ params }: ProductPageProps) {
               <AddToCartButton product={{ id: product.id, title: product.title, price: product.price, image: product.image }} />
             </div>
           </CardContent>
-          {/* <AddToCartButton product={{ id: product.id, title: product.title, price: product.price, image: product.image }} /> */}
+         
         </Card>
       </div>
     );

@@ -2,7 +2,7 @@
 
 import { useState, useEffect } from 'react';
 import { useAppDispatch, useAppSelector } from '@/Store/hooks';
-import { Order, CartItem } from '@/app/Types';
+import { Order, CartItem } from '@/Types';
 import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from '@/components/ui/table';
 import { Card, CardContent, CardFooter, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
@@ -16,14 +16,13 @@ export default function OrderTable() {
   const orders = useAppSelector(state => state.order.orders);
   const [selectedOrder, setSelectedOrder] = useState<Order | null>(null);
 
-  // Sync orders with localStorage
+
   useEffect(() => {
     // Load orders from localStorage on mount
     if (typeof window !== 'undefined') {
       const storedOrders = localStorage.getItem('orders');
       if (storedOrders) {
         const parsedOrders: Order[] = JSON.parse(storedOrders);
-        // Sync localStorage orders to Redux if not already present
         parsedOrders.forEach(order => {
           if (!orders.find(o => o.id === order.id)) {
             dispatch(addOrder(order));
@@ -33,7 +32,7 @@ export default function OrderTable() {
     }
   }, [dispatch]);
 
-  // Save orders to localStorage whenever they change
+  // Save orders to localStorage
   useEffect(() => {
     if (typeof window !== 'undefined' && orders.length > 0) {
       localStorage.setItem('orders', JSON.stringify(orders));

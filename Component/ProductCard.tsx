@@ -1,4 +1,4 @@
-import { Product } from '@/app/Types';
+import { Product } from '@/Types';
 import Image from 'next/image';
 import Link from 'next/link';
 import { Card, CardContent } from '@/components/ui/card';

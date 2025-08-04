@@ -6,7 +6,7 @@ import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Label } from '@/components/ui/label';
 import { Card, CardContent, CardHeader, CardTitle, CardFooter } from '@/components/ui/card';
-import { ShoppingCart, CheckCircle, Truck, User } from 'lucide-react';
+import {  CheckCircle, } from 'lucide-react';
 import { v4 as uuidv4 } from 'uuid';
 import Image from 'next/image';
 import toast from 'react-hot-toast';
@@ -33,7 +33,7 @@ export default function CheckoutForm() {
     const newErrors: { [key: string]: string } = {};
     if (!formData.fullName.trim()) newErrors.fullName = 'Full name is required';
     if (!formData.shippingAddress.trim()) newErrors.shippingAddress = 'Shipping address is required';
-    if (!formData.phoneNumber || !/^\d{10}$/.test(formData.phoneNumber))
+    if (!formData.phoneNumber || !/^\d{11}$/.test(formData.phoneNumber))
       newErrors.phoneNumber = 'Valid 10-digit phone number is required';
     return newErrors;
   };
@@ -70,6 +70,10 @@ export default function CheckoutForm() {
         padding: '16px',
         borderRadius: '8px',
       },
+    });
+    toast.success(`Thank You`, {
+      duration: 3000,
+      position: 'top-right',
     });
   };
 

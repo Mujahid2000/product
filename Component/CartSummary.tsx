@@ -19,7 +19,6 @@ export default function CartSummary() {
   }, []);
 
   if (!hasMounted) {
-    // Avoid rendering anything until after hydration
     return null;
   }
 
